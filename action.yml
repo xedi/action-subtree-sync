@@ -1,0 +1,19 @@
+name: 'Subtree Sync'
+author: 'Chris Smith <chris@xedi.com>'
+description: 'Synchronises a subtree repository with the parent repository'
+inputs:
+  subtree:
+    description: 'Full name of the subtree repository (e.g. owner/repository)'
+    required: true
+  subtree_deploy_key:
+    description: 'Deploy key for the subtree repository'
+    required: true
+  split_prefix:
+    description: "Prefix for the split"
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: share-2
+  color: blue
